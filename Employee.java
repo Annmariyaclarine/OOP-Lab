@@ -45,14 +45,19 @@ public class Employee {
 		}
 		System.out.println("Enter the employee number of employee to be searched");
 		int empnum=inp.nextInt();
+		int f=1;
 		for(int i=0;i<n;i++)
 		{
 			if(e[i].eNo==empnum)
 			{
 				e[i].display();
 				System.out.print("\n");
+				f=0;
 			}
 			
+		}
+		if(f==1) {
+			System.out.println("No employee of employee number "+empnum+" is found");
 		}
 	}
 
