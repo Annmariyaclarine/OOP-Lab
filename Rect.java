@@ -1,18 +1,24 @@
-class Rect1{
-	int l;
-	int b;
-	Rect1(){
-		l=10;
-		b=15;
+package Graphics;
+
+import java.util.Scanner;
+
+public class Rect {
+	double length,breadth,area,perimeter;
+	public Rect(){
+		Scanner inp=new Scanner(System.in);
+		System.out.println("enter length");
+		this.length=inp.nextInt();
+		System.out.println("enter breadth");
+		this.breadth=inp.nextInt();
 	}
-	void display(){
-		System.out.println("Area="+l*b);
-		}
-}
-class Rect{
-	public static void main(String args[]){
-		Rect1 Robj=new Rect1();
-		Robj.display();
+	public void rectarea() {
+		area=length*breadth;
+		System.out.println("area="+area);
 	}
-}
+	public void rectperimeter() {
+		perimeter=2*(length+breadth);
+		System.out.println("perimeter="+perimeter);
+	}
 	
+
+}
